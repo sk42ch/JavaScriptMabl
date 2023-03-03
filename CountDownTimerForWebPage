@@ -1,0 +1,60 @@
+
+// it should place in the header Section <Style>
+<head>
+    <style>
+      #hello-world {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #f2f2f2;
+        padding: 10px;
+        font-size: 24px;
+      }
+    </style>
+  </head>
+  
+  
+  //Place that into script section
+  <script>
+  // Define the countdown function
+  function countdown() {
+    var seconds = 40;
+    var countdownElement = document.getElementById("countdown");
+    var timer = setInterval(function() {
+      seconds--;
+      if (seconds < 0) {
+        clearInterval(timer);
+        countdownElement.textContent = "Welcome to Information Technology";
+        // Do any additional actions when the timer ends
+      } else {
+        var minutes = Math.floor(seconds / 60);
+        var remainingSeconds = seconds % 60;
+        countdownElement.textContent = "Time left: " + minutes + ":" + remainingSeconds.toString().padStart(2, '0');
+      }
+    }, 1000);
+  }
+  
+  // Call the countdown function when the page finishes loading
+  window.onload = function() {
+    countdown();
+  };
+</script>
+
+
+//Place that into pagelevel section / single page section
+<p id="countdown">Time left: 0:40</p>
+
+
+
+//For auto scroll by 250 px, Need to place into the head
+<script>
+      // Define the function to scroll the page by 100px
+      function autoScroll() {
+        window.scrollBy(0, 100);
+      }
+      
+      // Call the autoScroll function when the page finishes loading
+      window.onload = function() {
+        autoScroll();
+      };
+    </script>
