@@ -24,7 +24,7 @@
       seconds--;
       if (seconds < 0) {
         clearInterval(timer);
-        countdownElement.textContent = "Welcome to Information Technology";
+        countdownElement.textContent = "Welcome";
         // Do any additional actions when the timer ends
       } else {
         var minutes = Math.floor(seconds / 60);
@@ -50,11 +50,11 @@
 <script>
       // Define the function to scroll the page by 100px
       function autoScroll() {
-        window.scrollBy(0, 100);
+        window.scrollBy(0, 20);
       }
       
       // Call the autoScroll function when the page finishes loading
-      window.onload = function() {
+      window.addEventListener('load', function() {
         autoScroll();
-      };
+      });
     </script>
